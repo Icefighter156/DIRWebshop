@@ -1,0 +1,132 @@
+/* =========================
+   COLOR SCHEME 
+   ========================= */
+   :root {
+    --primary: #4f46e5;
+    --primary-dark: #3730a3;
+    --primary-light: #6366f1;
+  
+    --accent: #10b981;
+    --accent-dark: #059669;
+  
+    --bg: #f9fafb;
+    --surface: #ffffff;
+    --border: #e5e7eb;
+  
+    --text: #111827;
+    --muted: #6b7280;
+  
+  
+    --font: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  }
+  
+  /* =========================
+     BASE
+     ========================= */
+  body {
+    margin: 0;
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 24px;
+  }
+  
+  .muted {
+    color: var(--muted);
+  }
+  
+  /* =========================
+     TYPOGRAPHY
+     ========================= */
+  .text-xl { font-size: 1.5rem; }
+  .text-lg { font-size: 1.125rem; }
+  
+
+  
+  
+  /* primary */
+  .primary { background: var(--primary); }
+  .primary-dark { background: var(--primary-dark); }
+  .primary-light { background: var(--primary-light); }
+  
+  /* accent */
+  .accent { background: var(--accent); }
+  .accent-dark { background: var(--accent-dark); }
+  
+  /* neutrals */
+  .bg {
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .surface {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .border {
+    background: var(--border);
+    color: var(--text);
+  }
+  
+
+  
+
+  
+  .btn {
+    margin-top: 10px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+  }
+
+
+
+  .header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+  }
+  
+  .logo {
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: var(--primary);
+  }
+  
+  .nav {
+    display: flex;
+    gap: 18px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+  
+  .nav a:hover {
+    color: var(--primary);
+  }
+  
+  .btn:hover {
+    background: var(--primary-dark);
+  }
