@@ -22,7 +22,10 @@
 
   --transition: 0.25s ease;
 
-  --font: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family:
+  "Roboto",
+  "Google Sans",
+  sans-serif;
 }
 
 /* =========================
@@ -46,10 +49,7 @@ body {
   line-height: 1.6;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
+
 
 /* =========================
    LAYOUT
@@ -204,6 +204,9 @@ p {
   flex-wrap: wrap;
 }
 
+
+
+
 /* =========================
    HEADER
 ========================= */
@@ -231,8 +234,17 @@ p {
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--primary);
+  display: flex;
+  flex-direction: row;
 }
 
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+
+  object-fit: contain;
+}
 .nav {
   display: flex;
   align-items: center;
@@ -280,8 +292,8 @@ p {
 }
 
 .hero-inner {
-  display: grid;
-  grid-template-columns: 1fr 0.8fr;
+  display: flex;
+  flex-direction: row;
   gap: 4rem;
   align-items: center;
 }
@@ -341,6 +353,7 @@ p {
     grid-template-columns: 1fr;
   }
 
+}
 
 
   /* =========================
@@ -845,145 +858,48 @@ textarea {
 
 
 /* =========================
-   ACCESSIBILITY
+   HERO LOGO
 ========================= */
-.skip-link {
-  position: absolute;
-  left: -9999px;
-  top: 0;
+.hero-brand {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
 }
 
-.skip-link:focus {
-  left: 1rem;
-  top: 1rem;
+.hero-logo {
+  width: 8rem;
+  height: 8rem;
 
-  background: white;
-  color: black;
+  object-fit: contain;
 
-  padding: 1rem;
-
-  border-radius: 0.5rem;
-
-  z-index: 9999;
+  filter: drop-shadow(
+    0 10px 20px rgba(79, 70, 229, 0.2)
+  );
 }
 
 /* =========================
-   BETTER CONTRAST
+   PATTERN DIVIDER
 ========================= */
-:root {
-  --muted: #4b5563;
-}
+.pattern-divider {
+  width: 100%;
 
-/* =========================
-   FOCUS STATES
-========================= */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible {
-  outline: 3px solid var(--primary);
-  outline-offset: 3px;
-}
-
-/* =========================
-   FORM VALIDATION
-========================= */
-.form-group input:invalid {
-  border: 1px solid #dc2626;
-}
-
-.form-group input:valid {
-  border: 1px solid #059669;
-}
-
-.form-group input:focus:invalid {
-  box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.15);
-}
-
-.form-group input:focus:valid {
-  box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.15);
-}
-
-/* =========================
-   ERROR MESSAGE
-========================= */
-.error-message {
-  display: none;
-
-  margin-top: 0.4rem;
-
-  color: #b91c1c;
-  font-size: 0.9rem;
-}
-
-.form-group input:invalid:not(:placeholder-shown)
-+ .error-message {
-  display: block;
-}
-
-/* =========================
-   LINKS
-========================= */
-a {
-  text-decoration: underline;
-}
-
-a:hover {
-  text-decoration-thickness: 2px;
-}
-
-/* =========================
-   PAYMENT METHODS
-========================= */
-.payment-methods {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-.payment-methods legend {
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.method {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  justify-content: space-between;
 
-  padding: 1rem;
+  overflow: hidden;
 
-  border: 1px solid var(--border);
-  border-radius: 1rem;
-
-  cursor: pointer;
-}
-
-.method input {
-  width: 1rem;
-  height: 1rem;
+  padding: 2rem 0;
 }
 
 /* =========================
-   CHECKBOX
+   PATTERN IMAGE
 ========================= */
-.checkbox-group {
-  gap: 1rem;
-}
+.pattern-img {
+  width: 22rem;
+  height: auto;
 
-.checkbox-group input {
-  min-width: 1.2rem;
-  min-height: 1.2rem;
-}
+  opacity: 0.5;
 
-/* =========================
-   REDUCED MOTION
-========================= */
-@media (prefers-reduced-motion: reduce) {
-
-  * {
-    scroll-behavior: auto;
-    transition: none !important;
-  }
-
-}
+  flex-shrink: 0;
 }
