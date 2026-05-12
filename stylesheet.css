@@ -903,3 +903,62 @@ textarea {
 
   flex-shrink: 0;
 }
+
+
+/* =========================
+   NEWSLETTER
+========================= */
+.newsletter-box {
+  margin-top: 3rem;
+
+  padding: 2rem;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+
+  box-shadow: var(--shadow);
+
+  text-align: center;
+}
+
+.newsletter-box h2 {
+  margin-bottom: 1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 1rem;
+
+  margin-top: 1.5rem;
+}
+
+.newsletter-form input {
+  flex: 1;
+
+  padding: 1rem;
+
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+
+  font: inherit;
+}
+
+.newsletter-info {
+  margin-top: 1rem;
+
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 40rem) {
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+}
